@@ -334,9 +334,10 @@
                 </div>
                 <div id="page2" class="tab-pane fade in landing-content" style="color:#333333;">
                    <div class="center-block col-md-12 ">
-                         <h2>Major Regional Transportation Projects</h2> 
+                         <h2>Major Regional Transportation Projects</h2>
+                         <p>This table shows how revenue is allocated to different funding categories for both roadway and transit projects. Illustrative projects represent projects that regional staekholders have identified and have been carried over from 2040.</p> 
                          <div class="col-md-12">
-                         <table id="MRPtable" class="display" width="100%"></table>
+                         <table id="MRPtable" class="compact" width="100%"></table>
                         </div>
                 </div>  
                 </div>       
@@ -395,7 +396,7 @@
                        <div class="panel-group legend">
                             <div class="panel panel-default">
                                 <div class="panel-heading">
-                                    <a href="#map" data-toggle="modal" data-target="#modal_3" ><div class="panelinfo group2_panel"> </div></a>
+                                    <a href="#map" data-toggle="modal" data-target="#modal_3" ><div class="panelinfo group3_panel"> </div></a>
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion_" href="#Group_3">
                                         <div class="panellink group3_panel">
                                             <span>Externally Funded Projects</span>
@@ -408,6 +409,39 @@
                                      <input type="checkbox" name="LayerCont" id="layer8" class="dyna layer" z-index="3">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+
+                    <!---Unmapped Projects-->
+                       <div class="panel-group legend">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <a href="#map" data-toggle="modal" data-target="#modal_UM" ><div class="panelinfo group4_panel"> </div></a>
+                                        <div style="font-weight: 700;font-size: 1.2em;color: #008d92 !important;padding: 3px 15px 4px 0;margin-left: 15px;">
+                                            View Unmapped Projects
+                                        </div>
+                                    </a>
+                                </div> 
+                            </div>
+                        </div>
+
+                            <!---Legend-->
+                       <div class="panel-group legend">
+                            <div class="panel panel-default" style="height:170px;background-color:#fff;"> 
+                              <div class="panel-heading">
+                                <span><h5 style="margin-left: 10px;">Legend</h5></span> 
+                              </div>   
+                     
+                              <div class="col-sm-1 content">
+                      
+                              </div>
+                              <div class="col-sm-9 content">
+                                <img style="margin:5px 0px 10px 0px" src="lib/images/legend.png"/>
+                              </div> 
+                              <div class="col-sm-2 content">
+                                   
+                              </div>  
+                
                             </div>
                         </div>
          
@@ -600,7 +634,88 @@
             </div><!-- /.modal-dialog -->
     </div> 
 
-<script type="text/javascript" src="data/mrp2045.js"></script>
+ <!-- Unmapped Modal Window -->
+<div class="modal fade" id="modal_UM"> 
+           <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Unmapped Projects</h4>
+                    </div>
+                    <div class="modal-body">
+                         <ul id="fcTabs" class="nav nav-tabs">
+                             <li class="active"><a href="#map" data-target="#tabs-52" data-toggle="tab">Bicycle and Pedestrian</a></li>
+                             <li><a href="#map"data-target="#tabs-53" data-toggle="tab">Roadway Operational Improvements</a></li>
+                             <li><a href="#map" data-target="#tabs-54" data-toggle="tab">Transit System Preservation</a></li> 
+                             <li><a href="#map"data-target="#tabs-55" data-toggle="tab">Transit Operational Improvements</a></li>
+                             <li><a href="#map" data-target="#tabs-56" data-toggle="tab">Externally Funded</a></li> 
+                        </ul>
+                        <div id="fcTabsContent" class="tab-content" style="padding-top: 10px;">
+                                <div class="tab-pane fade in active" id="tabs-52">
+                                    <p><img src="lib/images/sidebar/tr_sp.png" class="modal_icon"/>Transit System Preservation projects represent needs for existing rail infrastructure, vehicle fleets, and stations. Regular vehicle track, signal, catenary, power substations, signals, vehicle overhaul and replacement, station renovations, and ADA accessibility needs were used to develop the need for each of these three categories using asset management data.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#69883A">Funded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tf_pr.png" />
+                                    <p style="color:#69883A">Projects in this category are included in the fiscally constrained financial plan.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#B4CA8B">Unfunded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tuf_pr.png" />
+                                    <p style="color:#B4CA8B">Projects in this category are not able to be included in the fiscally constrained financial plan, but are considered critical to achieving the Plan’s vision.</p>
+                                </div> 
+                                
+                                <div id="tabs-53" class="tab-pane fade in">
+                                    <p><img src="lib/images/sidebar/tr_op.png" class="modal_icon"/>Transit Operational Improvements projects aim to improve the functionality of the existing system through major repairs to existing rail lines at a cost greater than $20 million; major improvements to stations with more than 5,000 daily boardings or alightings, or cost more than $20 million; procurements that replace five or more vehicles in existing rail fleets; double track or siding additons to existing passenger rail lines; or upgrades to a traditional bus route with bus rapid transit service. Types of projects include real-time information systems, signal preemption, fare modernization, and double tracking and sidings to improve service frequency. The estimated needs were developed by DVRPC and regional transit agencies.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#69883A">Funded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tf_op.png" />
+                                    <p style="color:#69883A">Projects in this category are included in the fiscally constrained financial plan.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#B4CA8B">Unfunded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tuf_op.png" />
+                                    <p style="color:#B4CA8B">Projects in this category are not able to be included in the fiscally constrained financial plan, but are considered critical to achieving the Plan’s vision.</p>
+                                </div>
+                                
+                                <div id="tabs-54" class="tab-pane fade in">
+                                    <p><img src="lib/images/sidebar/tr_se.png" class="modal_icon"/>Transit System Expansion projects include new stations on existing lines (including station parking needs), extension of existing lines, or new rail and bus rapid transit (BRT) routes that the region would like to pursue. Need for this category is based on a short list of projects developed by the long-range plan subcommittee and includes projects listed in the Connections 2035 Plan and DVRPC’s Long-Range Vision for Transit Report.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#69883A">Funded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tf_ex.png" />
+                                    <p style="color:#69883A">Projects in this category are included in the fiscally constrained financial plan.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#B4CA8B">Unfunded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tuf_ex.png" />
+                                    <p style="color:#B4CA8B">Projects in this category are not able to be included in the fiscally constrained financial plan, but are considered critical to achieving the Plan’s vision.</p>
+                                </div>
+
+                                 <div id="tabs-55" class="tab-pane fade in">
+                                    <p><img src="lib/images/sidebar/tr_se.png" class="modal_icon"/>Transit System Expansion projects include new stations on existing lines (including station parking needs), extension of existing lines, or new rail and bus rapid transit (BRT) routes that the region would like to pursue. Need for this category is based on a short list of projects developed by the long-range plan subcommittee and includes projects listed in the Connections 2035 Plan and DVRPC’s Long-Range Vision for Transit Report.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#69883A">Funded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tf_ex.png" />
+                                    <p style="color:#69883A">Projects in this category are included in the fiscally constrained financial plan.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#B4CA8B">Unfunded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tuf_ex.png" />
+                                    <p style="color:#B4CA8B">Projects in this category are not able to be included in the fiscally constrained financial plan, but are considered critical to achieving the Plan’s vision.</p>
+                                </div>
+
+                                 <div id="tabs-56" class="tab-pane fade in">
+                                    <p><img src="lib/images/sidebar/tr_se.png" class="modal_icon"/>Transit System Expansion projects include new stations on existing lines (including station parking needs), extension of existing lines, or new rail and bus rapid transit (BRT) routes that the region would like to pursue. Need for this category is based on a short list of projects developed by the long-range plan subcommittee and includes projects listed in the Connections 2035 Plan and DVRPC’s Long-Range Vision for Transit Report.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#69883A">Funded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tf_ex.png" />
+                                    <p style="color:#69883A">Projects in this category are included in the fiscally constrained financial plan.</p>
+                                    <br>
+                                    <h5 class="modal-title" style="color:#B4CA8B">Unfunded</h5>
+                                    <img class="infologo" style="float:left;margin:0px 10px 0px 0px" src="lib/images/tuf_ex.png" />
+                                    <p style="color:#B4CA8B">Projects in this category are not able to be included in the fiscally constrained financial plan, but are considered critical to achieving the Plan’s vision.</p>
+                                </div>
+                    </div>
+                </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+    </div> 
+        <script type="text/javascript" src="data/mrp2045.js"></script>
         
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
