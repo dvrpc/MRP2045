@@ -94,9 +94,11 @@ a:hover, .navbar-inverse .navbar-nav>li>a:hover, .footer_btn:hover , .legend-che
 }
 .RSEF {
     background-color: #24527F !important;
+    color:#FFF;
 }
 .RSEU {
     background-color: #90ABD9 !important;
+    color:#FFF;
 }
 .TSPF {
     background-color: #69883A !important;
@@ -104,8 +106,8 @@ a:hover, .navbar-inverse .navbar-nav>li>a:hover, .footer_btn:hover , .legend-che
 .TSPU {
     background-color: #B4CA8B !important;
 }
-.EXT{
-     background-color: #795300 !important; 
+.EXT, .EXTF {
+background-color: #795300 !important; 
 }
 .EXTU {
 background-color: #a1864c !important;
